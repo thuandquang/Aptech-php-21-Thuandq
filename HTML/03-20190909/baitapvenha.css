@@ -1,0 +1,104 @@
+#one-div {
+    background-color:black;
+    height:80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;    
+}
+#two-div {
+    background-color:red;
+    height:20px;
+    width:70%;
+    display: flex;
+    margin: 20px;
+    border:0.5px solid white;
+}
+#three-div{
+    background-color:red;
+    height:20px;
+    width:30%;
+    margin-right: 20px;
+    border:0.5px solid white;
+}
+#mot-div{
+    background-color:black;
+    height:175px;
+    width: 50%;
+}
+section{
+    display: flex;
+    height:175px;
+    margin:30px;
+}
+#hai-div{
+    background-color:red;
+    height:10px;
+    width:80%;  
+    margin: 30px;
+    border:0.5px solid white;
+}
+#ba-div{
+    background-color:red;
+    height:30px;
+    width:80%;
+    margin:30px;
+    margin-top:50px;
+    border:0.5px solid white;
+}
+#bon-div{
+    background-color:black;
+    height:175px;
+    width:50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    
+}
+#nam-div{
+    background-color:red;
+    height:140px;
+    width: 50%;
+    margin:20px;
+    border:0.5px solid white;
+}
+#sau-div{
+    background-color:red;
+    height:140px;
+    width: 50%;
+    margin:20px;
+    border:0.5px solid white;
+}
+#tam-div{
+    background-color:black;
+    height:50px; 
+    
+    display: flex;
+    margin: 30px;
+}
+#muoi-div{
+    background-color:red;
+    height:5px;
+    width:30%;
+    margin: 20px;
+    display: flex;
+    border:0.5px solid white;
+}
+#muoimot-div{
+    background-color:red;
+    height:5px;
+    width:30%;
+    margin: 20px;
+    display: flex;
+    border:0.5px solid white;
+}
+#muoihai-div{
+    background-color:red;
+    height:5px;
+    width:30%;
+    margin: 20px;
+    display: flex;
+    border:0.5px solid white;
+}
