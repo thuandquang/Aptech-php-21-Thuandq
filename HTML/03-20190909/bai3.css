@@ -1,0 +1,33 @@
+#first-div {
+    background-color: grey;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+#left-div {
+    background-color: lightgrey;
+    width: 600px;
+    height: 300px;
+    margin-right:10px;
+    
+}
+section {
+    display: flex;
+    height: 300px;
+}
+#right-div {
+    background-color: white;
+    height: 300px;
+}
+#three-div {
+    background-color: grey;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
