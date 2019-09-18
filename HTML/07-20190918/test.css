@@ -1,0 +1,18 @@
+#one{
+    background-color:black;
+    height: 100px;
+    
+}
+#two{
+    background-color:red;
+    height: 100px; 
+}
+#three{
+    background-color:yellow; 
+    height: 100px;
+}
+.number{
+    
+    display: flex;
+    
+}
