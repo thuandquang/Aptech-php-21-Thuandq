@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script language="javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+    <style>
+    th,td{
+        
+    }
+    </style>
+  </head>
+
+  <body>
+    <!-- <img src="/bóng đèn/sang.png" id="light" height="100" width="100">
+    <button onclick= "switchlight()">Bật/Tắt</button>
+
+    <script>
+        function switchlight() {
+            var image = document.getElementById('light');
+            if (image.src.match("toi.png")) {
+                image.src = "/bóng đèn/sang.png";
+               
+            } else {
+                image.src = "/bóng đèn/toi.png";
+               
+            }
+        }
+       
+    </script> -->
+   
+    <div id="divone" style="background-color: black;height:100px;"></div>    
+    <div id="divtwo" style="background-color: red; height: 50px;width: 50px;"></div>
+    <div id="divthree" style="background-color: green;height: 100px;"></div>
+
+
+    <script language="javascript">
+        $(document).ready(function(){
+            $(divtwo).click(function(){
+                $(divone).hide();
+                $(divthree).toggle('fast');
+            })
+        })
+    </script>
+
+
+    <!-- <img src="/bóng đèn/sang.png" id="light" height="100" width="100" />
+
+    <input
+      type="button"
+      id="id-button"
+      onclick="battat()"
+      value="bật/tắt"
+    /><br />
+    <script>
+      function battat() {
+        var image = document.getElementById("light");
+        if (image.src.match("toi.png")) {
+          image.src = "/bóng đèn/sang.png";
+        } else {
+          image.src = "/bóng đèn/toi.png";
+        }
+      }
+    </script> -->
+    <!-- <table id="tab">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>e</td>
+                <td>f</td>
+                <td>g</td>
+            </tr>
+        </tbody>
+    </table>
+     -->
+  </body>
+</html>

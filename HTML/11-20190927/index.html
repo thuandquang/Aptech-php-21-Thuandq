@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+      <h1 id="one"></h1>
+    <button onclick="one()">one</button>
+
+    <script>
+        function one(){
+            document.getElementById('one').src="https://aphoto.vn/wp-content/uploads/2016/07/cach-chup-hinh-dep-bang-dien-thoai.jpg";
+        }
+        var thuan = {
+              tenn : "thuan",
+              lopp : "php21",
+              lo: function (ha) {
+                  
+                  return{
+                  hanhdong:"quet" + " " + ha + " " + "nha"
+                  };
+             }
+      };
+      thuan.lo();
+      console.log(thuan.lo('sach').hanhdong);
+    </script>
+  </body>
+</html>

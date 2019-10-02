@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      th,
+      td {
+        border: 1px solid #000;
+      }
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+  </head>
+
+  <body>
+    <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="data-1-row-1"></td>
+        <td id="data-2-row-1"></td>
+        <td id="data-3-row-1"></td>
+        <td id="data-4-row-1"></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <button onclick="themDuLieu();">Them du lieu</button>
+  <script>
+    var c = [1, 'a', 'b', 'c'];
+    
+    
+    console.log(c[3]);
+    function themDuLieu() {
+    //   var element = document.createElement('h1');
+    //   element.innerHTML = 'Hello PHP 21';
+    //   document.body.append(element);
+    //   // https://www.google.com/search?q=add+id+to+element+javascript&oq=add+id+to+element+&aqs=chrome.0.0j69i57j0l4.2506j0j7&sourceid=chrome&ie=UTF-8
+      for (var i = 1; i < 5; i++) {
+        var id = "data-" + i + "-row-1";
+        document.getElementById(id).innerHTML = c[i - 1];
+      }
+    }
+    
+  </script>
+    <!-- <div>
+      <a href="#" id="load-du-lieu">Load dữ liệu</a>
+    </div>
+    <div id="noidung"></div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#load-du-lieu").click(function(e) {
+          e.preventDefault();
+          $("#noidung").load("dulieu.html");
+        });
+      });
+    </script>
+     -->
+  </body>
+</html>
