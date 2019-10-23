@@ -44,10 +44,27 @@
 
                     <tbody>
                         <tr class="text-center">
-                            <th></th>
-                            <td></td>
-                            <th></th>
-                            <td></td>
+                            <th>29</th>
+                            <td>A</td>
+                            <th>ackoskd@gmail.com</th>
+                            <td class="d-flex align-items-center justify-content-around">
+                                <form action="./show.php" method="get">
+                                    <button class="btn btn-sm btn-primary">
+                                        Show
+                                    </button>
+                                </form>
+                                <form action="./edit.php" method="get">
+                                    <button class="btn btn-sm btn-warning">
+                                        Edit
+                                    </button>
+                                </form>
+                                <form action="">
+                    
+                                    <button class="btn btn-sm btn-danger">
+                                        Delete
+                                    </button>
+                                </form>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
