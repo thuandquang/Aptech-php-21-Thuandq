@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 //tao database 
 // $sql ="CREATE DATABASE USERS";
@@ -101,4 +101,33 @@
         ?>
     </select>
     <button type="submit">Đăng nhập</button>
-</form>
+</form> -->
+<!-- <?php
+    $severname = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "USERS";
+    // tao ket noi
+    $conn = mysqli_connect($severname, $username, $password, $dbname);
+    // check ket noi
+    if (!$conn) {
+        die("Connection failed " . mysqli_connect_error());
+    }
+
+    
+
+    // if the register button is clicked
+
+    $username = $_POST['thuan'];
+    $email = $_POST['thuan@gmail.com'];
+    $password_1 = $_POST['1223'];
+    $password_2 = $_POST['1223'];
+    echo "data is taken";
+
+    // if there are no errors, save user to database
+
+    $sql = "INSERT INTO Users(Username, Email, password) VALUES('$username', 
+ '$email', '$password_1')";
+    mysqli_query($db, $sql);
+    echo "data inserted successfully";
+    ?> -->
