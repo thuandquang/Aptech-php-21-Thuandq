@@ -24,39 +24,41 @@
   <div class="container">
     <div class="row mb-2">
       <div class="col-12">
-        <span class="badge badge-success text-white m-2">EDIT PAGE</span>
+        <span class="badge badge-success text-white m-2">CREATE PAGE</span>
       </div>
     </div>
     <form action="http://localhost:8000/users" method="POST">
       <input type="hidden" name="_token" value="{{csrf_token()}}">
-
-      <input type="hidden" name="_method" value="PUT">
       <div class="row1 m-2">
         <h5>NAME</h5>
-        <input type="text" class="form-control" name="name" value="{{$user->name}}">
+        <input type="text" class="form-control" id="name" name="name" placeholder="Name">
       </div>
       <div class="row2 m-2">
         <h5>EMAIL</h5>
-        <input type="email" class="form-control" name="email" value="{{$user->email}}">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
       </div>
-      <button type="submit" class="btn btn-warning text-uppercase text-white ">
-        edit
-      </button>
+      <div class="row3 m-2">
+        <h5>PASSWORD</h5>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+      </div>
+      <div class="row4 m-2">
+        <button type="submit" class="btn btn-danger text-uppercase ">
+          confirm
+        </button>
 
-  
+      </div>
   </div>
   <hr>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-between align-items-center">
-                <span class="text-muted">LARAVEL CRUD USERS DEMO</span>
-                <form action="http://localhost:8000/users/create" method="GET">
-                    <button class="btn btn-info ">CREATE AN USER</button>
-                </form>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-between align-items-center">
+        <span class="text-muted">LARAVEL CRUD USERS DEMO</span>
+        <form action="http://localhost:8000/users/create" method="GET">
+          <button class="btn btn-info ">CREATE AN USER</button>
+        </form>
+      </div>
     </div>
-
+  </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

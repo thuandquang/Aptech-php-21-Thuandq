@@ -27,9 +27,8 @@
         <span class="badge badge-success text-white m-2">EDIT PAGE</span>
       </div>
     </div>
-    <form action="http://localhost:8000/users" method="POST">
+    <form action="{{route('user.update',$user->id)}}" method="POST">
       <input type="hidden" name="_token" value="{{csrf_token()}}">
-
       <input type="hidden" name="_method" value="PUT">
       <div class="row1 m-2">
         <h5>NAME</h5>
@@ -42,20 +41,18 @@
       <button type="submit" class="btn btn-warning text-uppercase text-white ">
         edit
       </button>
-
-  
   </div>
   <hr>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-between align-items-center">
-                <span class="text-muted">LARAVEL CRUD USERS DEMO</span>
-                <form action="http://localhost:8000/users/create" method="GET">
-                    <button class="btn btn-info ">CREATE AN USER</button>
-                </form>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-between align-items-center">
+        <span class="text-muted">LARAVEL CRUD USERS DEMO</span>
+        <form action="http://localhost:8000/users/create" method="GET">
+          <button class="btn btn-info ">CREATE AN USER</button>
+        </form>
+      </div>
     </div>
+  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
