@@ -13,7 +13,7 @@
 
 <body>
     <div class="container d-flex mt-4">
-        <form action="http://localhost:8000/users" method="GET">
+        <form action="{{route('users.index')}}" method="GET">
             <button class="btn btn-primary ">Home</button>
         </form>
         <div class="col-10 mx-4 d-flex justify-content-center">
@@ -48,12 +48,12 @@
                             <td>{{$user->email}}</td>
                             <td>{{$user->password}}</td>
                             <td class="d-flex align-items-center justify-content-around">
-                                <form action="http://localhost:8000/users/{{$user->id}}/edit" method="GET">
+                                <form action="{{route('users.edit', $user->id)}}" method="GET">
                                     <button type="submit" class="btn btn-sm btn-warning">
                                         Edit
                                     </button>
                                 </form>
-                                <form action="http://localhost:8000/users/{{$user->id}}" method="POST">
+                                <form action="{{route('users.destroy', $user->id)}}" method="POST">
                                     <input type="hidden" name="_token" value={{csrf_token()}}>
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button type="submit" class="btn btn-sm btn-danger">
@@ -72,7 +72,7 @@
         <div class="row">
             <div class="col-12 d-flex justify-content-between align-items-center">
                 <span class="text-muted">LARAVEL CRUD USERS DEMO</span>
-                <form action="http://localhost:8000/users/create" method="GET">
+                <form action="{{route('users.create')}}" method="GET">
                     <button class="btn btn-info ">CREATE AN USER</button>
                 </form>
             </div>

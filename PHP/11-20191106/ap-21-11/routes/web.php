@@ -14,10 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/users', 'UserController@index')->name('user.index');
-Route::get('/users/create', 'UserController@create');
-Route::get('/users/{id}', 'UserController@show');
-Route::post('/users', 'UserController@store');
-Route::delete('/users/{id}', 'UserController@destroy');
-Route::get('/users/{id}/edit','UserController@edit');
-Route::put('/user/{id}', 'UserController@update')->name('user.update');
+// Route::get('/users', 'UserController@index')->name('user.index');
+// Route::get('/users/create', 'UserController@create');
+// Route::get('/users/{id}', 'UserController@show');
+// Route::post('/users', 'UserController@store');
+// Route::delete('/users/{id}', 'UserController@destroy');
+// Route::get('/users/{id}/edit','UserController@edit');
+// Route::put('/user/{id}', 'UserController@update')->name('user.update');
+
+route::resource('users','UserController');
