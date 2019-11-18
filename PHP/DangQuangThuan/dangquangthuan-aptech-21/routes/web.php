@@ -17,3 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('articles','ArticleController');
+
+//https://github.com/thuandquang/Aptech-php-21-Thuandq/tree/master/PHP/DangQuangThuan/dangquangthuan-aptech-21
