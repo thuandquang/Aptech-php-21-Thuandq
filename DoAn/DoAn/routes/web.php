@@ -17,11 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-route::get('/users',function(){
-    return view('buzzs.user');
-});
+// route::get('/users',function(){
+//     return view('buzzs.user');
+// });
 
-route::get('/account',function(){
-    return view('buzzs.account');
-});
+// route::get('/account',function(){
+// //     return view('buzzs.account');
+// });
 route::resource('buzzs','BuzzController');

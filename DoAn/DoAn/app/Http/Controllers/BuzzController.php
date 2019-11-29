@@ -14,8 +14,16 @@ class BuzzController extends Controller
      */
     public function index()
     {
-      
-        return view('buzzs.account');
+
+        $Buzzs = Buzz::get();
+        
+        return view(
+            'buzzs.account',
+            [
+                'account' => $Buzzs
+            ]
+
+        );
     }
 
     /**

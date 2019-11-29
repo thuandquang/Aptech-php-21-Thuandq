@@ -86,53 +86,37 @@
         <div class="three-row mx-4">
             <div class="d-flex">
                 <div class="col-6 ">
-                    <button class="btn btn-lg btn-block text-white btn-dark" onclick="taikhoan()">Tài Khoản</button>
+                    <button class="btn btn-lg btn-block text-white btn-dark " onclick="taikhoan()">Tài Khoản</button>
                 </div>
                 <div class="col-6">
-                    <button class="btn btn-lg btn-block text-dark btn-outline-secondary" onclick="sanpham()">Bài viết</button>
+                    <button class="btn btn-lg btn-block text-dark btn-outline-secondary " onclick="sanpham()">Bài viết</button>
                 </div>
             </div>
 
         </div>
 
-        <div id="sanpham" class="four-row m-3 d-flex">
-            <div class="col-4">
-                <div class="card">
-                    <img src="http://d2lllwtzebgpl1.cloudfront.net/4dd7c0209e20cf15530cb109197a842f_listingImg_Nfz0B1SHnG.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text">Off-White X Nike The Ten: Air Vapormax
-                        </p>
-                        <p>US 10.5 </p>
-                        <p>$585</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card">
-                    <img src="http://d2lllwtzebgpl1.cloudfront.net/7aa40f673445ea074039f858800ae158_listingImg_Nfz0B1SHnG.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text">Supreme Smoke Tee
-                        </p>
-                        <p>M </p>
-                        <p>$85</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card">
-                    <img src="http://d2lllwtzebgpl1.cloudfront.net/3798392f608ef48187642c13e0f2c92f_listingImg_Nfz0B1SHnG.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text">Supreme Realtree Camo Backpack
-                        </p>
+        <div id="taikhoan" class="four-row m-3 d-flex">
+            @foreach($account as $buzz)
+            <div class="col-4 taikhoan active">
 
-                        <p>$185</p>
+                <div class="card">
+                    <img src="" class="card-img-top">{{$buzz->image}}
+                    <div class="card-body">
+                        <p class="card-text">{{$buzz->name}}
+                        </p>
+                        <p>{{$buzz->cond}}</p>
+                        <p>{{$buzz->price}}</p>
                     </div>
                 </div>
+
             </div>
+
+            @endforeach
 
 
 
         </div>
+        <div><h1 class="sanpham active">thuận</h1></div>
 
     </div>
 
@@ -142,29 +126,43 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
-        function sanpham() {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("sanpham").innerHTML =
-                        this.responseText;
-                }
-            };
-            xhttp.open("GET", "buzz/sanpham.blade.php", true);
-            xhttp.send();
-        }
+        // function sanpham() {
+        //     var xhttp = new XMLHttpRequest();
+        //     xhttp.onreadystatechange = function() {
+        //         if (this.readyState == 4 && this.status == 200) {
+        //             document.getElementById("sanpham").innerHTML =
+        //                 this.responseText;
+        //         }
+        //     };
+        //     xhttp.open("GET", "buzz/sanpham.blade.php", true);
+        //     xhttp.send();
+        // }
 
-        function taikhoan() {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("sanpham").innerHTML =
-                        this.responseText;
-                }
-            };
-            xhttp.open("GET", "buzz/taikhoan.blade.php", true);
-            xhttp.send();
-        }
+        // function taikhoan() {
+        //     var xhttp = new XMLHttpRequest();
+        //     xhttp.onreadystatechange = function() {
+        //         if (this.readyState == 4 && this.status == 200) {
+        //             document.getElementById("sanpham").innerHTML =
+        //                 this.responseText;
+        //         }
+        //     };
+        //     xhttp.open("GET", "buzz/taikhoan.blade.php", true);
+        //     xhttp.send();
+        // }
+
+        jQuery(document).ready(function() {
+            tab = $('.on image p p p');
+
+            tab.on('click', function(event) {
+                event.preventDefault();
+                tab.removeClass('active');
+                $(this).addClass('active');
+
+                tab_content = $(this).attr('href');
+                $('div[id$="tab-content"]').removeClass('active');
+                $(tab_content).addClass('active');
+            });
+        });
     </script>
 </body>
 

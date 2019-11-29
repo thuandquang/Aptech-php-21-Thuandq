@@ -15,6 +15,10 @@ class CreateBuzzsTable extends Migration
     {
         Schema::create('buzzs', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('image');
+            $table->string('name');
+            $table->string('cond');
+            $table->string('price');
             $table->timestamps();
         });
     }
